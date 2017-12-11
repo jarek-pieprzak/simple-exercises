@@ -23,3 +23,22 @@
 
 
 
+// ENTRY POINT OF GAME
+
+function run() {
+    init();
+    int = setInterval(gameLoop, interval);
+
+}
+
+function init() {
+    createMap();
+    createSnake();
+    createFruit();
+}
+
+// TWORZENIE TABLICY DLA SNAKE
+
+function createMap() {
+
+}
