@@ -39,6 +39,21 @@ function init() {
 
 // TWORZENIE TABLICY DLA SNAKE
 
-function createMap() {
+function createMap(){
+    document.write("<table>");
+    for( var y = 0; y < height; y++){
+        document.write("<tr>");
+        for( var x = 0; x < width; x++){
+            if(x == 0 || x == width -1 || y == 0 || y == height -1){
+                document.write("<td class='wall' id='"+ x + "-" + y +"'></td>");
+            }else{
+                document.write("<td class='blank' id='"+ x + "-" + y +"'></td>");
+            }
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
 
 }
+
+run();

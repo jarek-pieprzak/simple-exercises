@@ -1,30 +1,23 @@
-* {
-    padding: 0;
-    margin: 0;
+*{
+    padding:0;
+    margin:0;
 }
-
-body {
-    background: black;
+body{
+    background-color:#000;
 }
-
-td {
-    width: 20px;
-    height: 20px;
+td{
+    width:20px;
+    height:20px;
 }
-
-.blank {
-background-color: blank;
+.blank{
+    background-color:blank;
 }
-
-.snake {
-    background-color: white;
+.snake{
+    background-color:white;
 }
-
-.wall {
-    background-color: green;
+.wall{
+    background-color:green;
 }
-
-.fruit {
-    background-color: red;
+.fruit{
+    background-color:red;
 }
-
