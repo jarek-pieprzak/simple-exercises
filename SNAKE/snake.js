@@ -88,4 +88,38 @@ function createFruit() {
     fX = fruitX;
     fY = fruitY;
 }
+
+window.addEventListener("keypress", function key() {
+    //klawisz W kieruje sneka w górę i reszta analogicznie
+    var key = event.keyCode;
+    if (direction != -1 && (key == 119 || key == 87)) {
+        direction = 0;
+    } else if (direction != 0 && (key ==115 || key ==83)) {
+        direction = -1;
+    } else if (direction != 2 && (key == 97 || key == 65)) {
+        direction = 1
+    } else if (direction != 1 && (key == 100 | key == 68)) {
+        direction = 2;
+    }
+
+    if (!running) {
+        running = true;
+    } else if (key == 32) {
+        running = false;
+    }
+});
+
+function gameLoop() {
+    if (running && !gameOver) {
+        update();
+    } else if (gameOver) {
+        clearInterval(int);
+    }
+}
+
+function update() {
+    setBlock(fX, fY, "fruit");
+
+}
+
 run();
