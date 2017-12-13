@@ -118,8 +118,29 @@ function gameLoop() {
 }
 
 function update() {
-    setBlock(fX, fY, "fruit");
+    set(fX, fY, "fruit");
+    set(tailX[length], tailY[length], "blank");
+    if (direction == 0) {
+        snakeY--;
+    } else if (direction == -1) {
+        snakeY++;
+    } else if (direction == 1) {
+        snakeX--;
+    } else if (direction == 2) {
+        snakeX++;
+    }
 
+    set(snakeX, snakeY, "snake");
 }
+
+function updateTail() {
+    for (var i = length; i > 0; i--) {
+        tailX[i] = tailX[i-1];
+        tailY[i] = tailY[i-1];
+    }
+    tailX[0] = snakeX;
+    tailY[0] = snakeY;
+}
+
 
 run();
